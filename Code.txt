@@ -1,0 +1,15 @@
+g++ Login.cpp `mysql_config --cflags --libs` -o Login.cgi -lcgicc
+
+g++ StudentInterface.cpp `mysql_config --cflags --libs` -o StudentInterface.cgi -lcgicc
+
+g++ TeacherInterface-Search.cpp `mysql_config --cflags --libs` -o TeacherInterface-Search.cgi -lcgicc
+
+g++ TeacherInterface-Insert.cpp `mysql_config --cflags --libs` -o TeacherInterface-Insert.cgi -lcgicc
+
+g++ TeacherInterface-Delete.cpp `mysql_config --cflags --libs` -o TeacherInterface-Delete.cgi -lcgicc
+
+CREATE TABLE LoginInfo(
+  student_id numeric(10,0) NOT NULL,
+  password varchar(20) NOT NULL,
+  person_type varchar(5) NOT NULL
+);
